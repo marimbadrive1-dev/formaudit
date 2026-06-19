@@ -160,16 +160,15 @@
 
             let nomorResi = "FRM" + Date.now().toString().slice(-6);
 
-            let text =
-            `*RESI PENDAFTARAN*
+            let text = `RESI PENDAFTARAN
 
-            No Resi : ${nomorResi}
-            Tanggal : ${new Date().toLocaleDateString("id-ID")}
+            No. Resi: ${nomorResi}
+            Tanggal: ${new Date().toLocaleDateString("id-ID")}
 
-            Nama     : ${nama}
-            WhatsApp : ${wa}
-            Umur     : ${umur}
-            Kategori : ${kategori}
+            Nama: ${nama}
+            WhatsApp: ${wa}
+            Umur: ${umur}
+            Kategori: ${kategori}
 
             Alamat:
             ${alamat}
@@ -177,7 +176,12 @@
             Keterangan:
             ${pesan}
 
-            Status : Menunggu Verifikasi`;
+            Status: Menunggu Verifikasi`;
+
+            window.open(
+                "https://wa.me/6283189306589?text=${encodeURIComponent(text)}",
+                "_blank"
+            );
         }
     </script>
 
