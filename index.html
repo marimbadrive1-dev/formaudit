@@ -1,165 +1,200 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulir WhatsApp Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI',sans-serif;
+        }
 
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
+        body {
+            background: #f8faf8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-.card{
-background:#fff;
-width:100%;
-max-width:550px;
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.3);
-}
+        .card {
+            background: #fff;
+            width: 100%;
+            max-width: 550px;
+            padding: 35px;
+            border-radius: 24px;
+            border: 1px solid #dfeee3;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+        }
 
-h2{
-text-align:center;
-margin-bottom:8px;
-color:#111827;
-}
+        .card::before {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 5px;
+            background: #b8e0c2;
+            border-radius: 999px;
+            margin: 0 auto 20px;
+        }
 
-.subtitle{
-text-align:center;
-margin-bottom:20px;
-color:#64748b;
-font-size:14px;
-}
+        h2 {
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
 
-input,textarea,select{
-width:100%;
-padding:14px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:10px;
-outline:none;
-font-size:15px;
-}
+        .subtitle {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #6b7280;
+            font-size: 14px;
+        }
 
-input:focus,
-textarea:focus,
-select:focus{
-border-color:#25D366;
-box-shadow:0 0 0 3px rgba(37,211,102,.15);
-}
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 15px;
+            border: 1px solid #d7e8db;
+            border-radius: 12px;
+            outline: none;
+            font-size: 15px;
+            background: #fcfffc;
+        }
 
-textarea{
-resize:vertical;
-}
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #8bcf9d;
+            box-shadow: 0 0 0 4px rgba(139,207,157,.15);
+        }
 
-button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:#25D366;
-color:white;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-}
+        textarea {
+            resize: vertical;
+        }
 
-button:hover{
-opacity:.9;
-}
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #8bcf9d;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
-.footer{
-text-align:center;
-font-size:12px;
-margin-top:15px;
-color:#64748b;
-}
-</style>
+        button:hover {
+            background: #78c48c;
+        }
 
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 18px;
+            color: #7b8b80;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="card">
+    <div class="card">
 
-<h2>Formulir Pendaftaran</h2>
+        <h2>Formulir Pendaftaran</h2>
 
-<p class="subtitle">
-Silakan isi data dengan lengkap
-</p>
+        <p class="subtitle">
+            Silakan isi data dengan lengkap
+        </p>
 
-<input type="text" id="nama" placeholder="Nama Lengkap">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required>
 
-<input type="text" id="wa" placeholder="Nomor WhatsApp">
+        <input type="tel" id="wa" placeholder="Nomor WhatsApp" required>
 
-<input type="number" id="umur" placeholder="Umur">
+        <input type="number" id="umur" placeholder="Umur">
 
-<select id="kategori">
-<option>Pendaftaran</option>
-<option>Konsultasi</option>
-<option>Informasi</option>
-<option>Lainnya</option>
-</select>
+        <select id="kategori">
+            <option>Pendaftaran</option>
+            <option>Konsultasi</option>
+            <option>Informasi</option>
+            <option>Lainnya</option>
+        </select>
 
-<textarea id="alamat" rows="4" placeholder="Alamat Lengkap"></textarea>
+        <textarea id="alamat" rows="4" placeholder="Alamat Lengkap"></textarea>
 
-<textarea id="pesan" rows="5" placeholder="Keterangan atau pesan tambahan"></textarea>
+        <textarea id="pesan" rows="5" placeholder="Keterangan Tambahan"></textarea>
 
-<button onclick="kirimWA()">
-📲 Kirim ke WhatsApp Admin
-</button>
+        <button onclick="kirimWA()">
+            Kirim Data
+        </button>
 
-<div class="footer">
-Data akan otomatis dikirim ke WhatsApp Admin
-</div>
+        <div class="footer">
+            Data akan dikirim ke admin melalui WhatsApp
+        </div>
 
-</div>
+    </div>
 
-<script>
+    <script>
+        function kirimWA() {
 
-function kirimWA(){
+            let nama = document.getElementById("nama").value.trim();
+            let wa = document.getElementById("wa").value.trim();
 
-let nama = document.getElementById("nama").value;
-let wa = document.getElementById("wa").value;
-let umur = document.getElementById("umur").value;
-let kategori = document.getElementById("kategori").value;
-let alamat = document.getElementById("alamat").value;
-let pesan = document.getElementById("pesan").value;
+            if (nama === "" || wa === "") {
+                alert("Nama dan Nomor WhatsApp wajib diisi.");
+                return;
+            }
 
-let text =
-`📋 *FORMULIR PENDAFTARAN*
+            let umur = document.getElementById("umur").value;
+            let kategori = document.getElementById("kategori").value;
+            let alamat = document.getElementById("alamat").value;
+            let pesan = document.getElementById("pesan").value;
 
-👤 Nama : ${nama}
-📱 WhatsApp : ${wa}
-🎂 Umur : ${umur}
-📂 Kategori : ${kategori}
+            let nomorResi =
+            "FRM" +
+            Date.now().toString().slice(-8);
 
-🏠 Alamat :
-${alamat}
+            let text =
+            `==============================
+            RESI PENDAFTARAN
+            ==============================
 
-💬 Keterangan :
-${pesan}`;
+            No. Resi : ${nomorResi}
+            Tanggal  : ${new Date().toLocaleString("id-ID")}
 
-window.open(
-`https://wa.me/6283189306589?text=${encodeURIComponent(text)}`,
-'_blank'
-);
+            ------------------------------
+            DATA PEMOHON
+            ------------------------------
 
-}
+            Nama      : ${nama}
+            WhatsApp  : ${wa}
+            Umur      : ${umur}
+            Kategori  : ${kategori}
 
-</script>
+            Alamat
+            ${alamat}
+
+            Keterangan
+            ${pesan}
+
+            ==============================
+            Status : MENUNGGU VERIFIKASI
+            ==============================`;
+
+            window.open(
+                `https://wa.me/6283189306589?text=${encodeURIComponent(text)}`,
+                "_blank"
+            );
+        }
+    </script>
 
 </body>
 </html>
