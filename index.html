@@ -158,41 +158,26 @@
             let alamat = document.getElementById("alamat").value;
             let pesan = document.getElementById("pesan").value;
 
-            let nomorResi =
-            "FRM" +
-            Date.now().toString().slice(-8);
+            let nomorResi = "FRM" + Date.now().toString().slice(-6);
 
             let text =
-            `==============================
-            RESI PENDAFTARAN
-            ==============================
+            `*RESI PENDAFTARAN*
 
-            No. Resi : ${nomorResi}
-            Tanggal  : ${new Date().toLocaleString("id-ID")}
+            No Resi : ${nomorResi}
+            Tanggal : ${new Date().toLocaleDateString("id-ID")}
 
-            ------------------------------
-            DATA PEMOHON
-            ------------------------------
+            Nama     : ${nama}
+            WhatsApp : ${wa}
+            Umur     : ${umur}
+            Kategori : ${kategori}
 
-            Nama      : ${nama}
-            WhatsApp  : ${wa}
-            Umur      : ${umur}
-            Kategori  : ${kategori}
-
-            Alamat
+            Alamat:
             ${alamat}
 
-            Keterangan
+            Keterangan:
             ${pesan}
 
-            ==============================
-            Status : MENUNGGU VERIFIKASI
-            ==============================`;
-
-            window.open(
-                `https://wa.me/6283189306589?text=${encodeURIComponent(text)}`,
-                "_blank"
-            );
+            Status : Menunggu Verifikasi`;
         }
     </script>
 
