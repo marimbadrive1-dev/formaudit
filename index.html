@@ -155,8 +155,8 @@
 
             let umur = document.getElementById("umur").value;
             let kategori = document.getElementById("kategori").value;
-            let alamat = document.getElementById("alamat").value;
-            let pesan = document.getElementById("pesan").value;
+            let alamat = document.getElementById("alamat").value.trim();
+            let pesan = document.getElementById("pesan").value.trim();
 
             let nomorResi = "FRM" + Date.now().toString().slice(-6);
 
@@ -167,19 +167,19 @@
 
             Nama: ${nama}
             WhatsApp: ${wa}
-            Umur: ${umur}
+            Umur: ${umur || "-"}
             Kategori: ${kategori}
 
             Alamat:
-            ${alamat}
+            ${alamat || "-"}
 
             Keterangan:
-            ${pesan}
+            ${pesan || "-"}
 
             Status: Menunggu Verifikasi`;
 
             window.open(
-                "https://wa.me/6283189306589?text=${encodeURIComponent(text)}",
+                `https://wa.me/6283189306589?text=${encodeURIComponent(text)}`,
                 "_blank"
             );
         }
