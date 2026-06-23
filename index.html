@@ -1,189 +1,198 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Pendaftaran</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir Pendaftaran</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI',sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-        body {
-            background: #f8faf8;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+body{
+    background:#f8faf8;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
 
-        .card {
-            background: #fff;
-            width: 100%;
-            max-width: 550px;
-            padding: 35px;
-            border-radius: 24px;
-            border: 1px solid #dfeee3;
-            box-shadow: 0 10px 30px rgba(0,0,0,.06);
-        }
+.card{
+    background:#fff;
+    width:100%;
+    max-width:550px;
+    padding:15px;
+    border-radius:24px;
+    border:1px solid #dfeee3;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
 
-        .card::before {
-            content: "";
-            display: block;
-            width: 70px;
-            height: 5px;
-            background: #b8e0c2;
-            border-radius: 999px;
-            margin: 0 auto 20px;
-        }
+.card::before{
+    content:"";
+    display:block;
+    width:70px;
+    height:5px;
+    background:#b8e0c2;
+    border-radius:999px;
+    margin:0 auto 20px;
+}
 
-        h2 {
-            text-align: center;
-            color: #1f2937;
-            margin-bottom: 8px;
-            font-size: 28px;
-        }
+h2{
+    text-align:center;
+    color:#1f2937;
+    margin-bottom:8px;
+    font-size:28px;
+}
 
-        .subtitle {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #6b7280;
-            font-size: 14px;
-        }
+.subtitle{
+    text-align:center;
+    margin-bottom:25px;
+    color:#6b7280;
+    font-size:14px;
+}
 
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 14px 16px;
-            margin-bottom: 15px;
-            border: 1px solid #d7e8db;
-            border-radius: 12px;
-            outline: none;
-            font-size: 15px;
-            background: #fcfffc;
-        }
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:15px;
+    border:1px solid #d7e8db;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    background:#fcfffc;
+}
 
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: #8bcf9d;
-            box-shadow: 0 0 0 4px rgba(139,207,157,.15);
-        }
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#8bcf9d;
+    box-shadow:0 0 0 4px rgba(139,207,157,.15);
+}
 
-        textarea {
-            resize: vertical;
-        }
+textarea{
+    resize:vertical;
+}
 
-        button {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 12px;
-            background: #8bcf9d;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-        }
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#8bcf9d;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
 
-        button:hover {
-            background: #78c48c;
-        }
+button:hover{
+    background:#78c48c;
+}
 
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            margin-top: 18px;
-            color: #7b8b80;
-        }
-    </style>
+.footer{
+    text-align:center;
+    font-size:12px;
+    margin-top:18px;
+    color:#7b8b80;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="card">
+<div class="card">
 
-        <h2>Formulir Pendaftaran</h2>
+    <h2>Formulir Pendaftaran</h2>
 
-        <p class="subtitle">
-            Silakan isi data dengan lengkap
-        </p>
+    <p class="subtitle">
+        Silakan isi data dengan lengkap
+    </p>
 
-        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+    <input type="text" id="nama" placeholder="Nama Lengkap" required>
 
-        <input type="tel" id="wa" placeholder="Nomor WhatsApp" required>
+    <input type="tel" id="wa" placeholder="Nomor WhatsApp" required>
 
-        <input type="number" id="umur" placeholder="Umur">
+    <input type="text" id="bank" placeholder="Nama Bank">
 
-        <select id="kategori">
-            <option>Pendaftaran</option>
-            <option>Konsultasi</option>
-            <option>Informasi</option>
-            <option>Lainnya</option>
-        </select>
+    <input type="text" id="rekening" placeholder="Nomor Rekening">
 
-        <textarea id="alamat" rows="4" placeholder="Alamat Lengkap"></textarea>
+    <input type="number" id="umur" placeholder="Umur">
 
-        <textarea id="pesan" rows="5" placeholder="Keterangan Tambahan"></textarea>
+    <select id="kategori">
+        <option>Pendaftaran</option>
+        <option>Konsultasi</option>
+        <option>Informasi</option>
+        <option>Lainnya</option>
+    </select>
 
-        <button onclick="kirimWA()">
-            Kirim Data
-        </button>
+    <textarea id="alamat" rows="4" placeholder="Alamat Lengkap"></textarea>
 
-        <div class="footer">
-            Data akan dikirim ke admin melalui WhatsApp
-        </div>
+    <textarea id="pesan" rows="5" placeholder="Keterangan Tambahan"></textarea>
 
+    <button onclick="kirimWA()">
+        Kirim Data
+    </button>
+
+    <div class="footer">
+        Data akan dikirim ke admin melalui WhatsApp
     </div>
 
-    <script>
-        function kirimWA() {
+</div>
 
-            let nama = document.getElementById("nama").value.trim();
-            let wa = document.getElementById("wa").value.trim();
+<script>
+function kirimWA(){
 
-            if (nama === "" || wa === "") {
-                alert("Nama dan Nomor WhatsApp wajib diisi.");
-                return;
-            }
+    let nama = document.getElementById("nama").value.trim();
+    let wa = document.getElementById("wa").value.trim();
 
-            let umur = document.getElementById("umur").value;
-            let kategori = document.getElementById("kategori").value;
-            let alamat = document.getElementById("alamat").value.trim();
-            let pesan = document.getElementById("pesan").value.trim();
+    if(nama === "" || wa === ""){
+        alert("Nama dan Nomor WhatsApp wajib diisi.");
+        return;
+    }
 
-            let nomorResi = "FRM" + Date.now().toString().slice(-6);
+    let bank = document.getElementById("bank").value.trim();
+    let rekening = document.getElementById("rekening").value.trim();
+    let umur = document.getElementById("umur").value;
+    let kategori = document.getElementById("kategori").value;
+    let alamat = document.getElementById("alamat").value.trim();
+    let pesan = document.getElementById("pesan").value.trim();
 
-            let text = `RESI PENDAFTARAN
+    let nomorResi = "FRM" + Date.now().toString().slice(-6);
 
-            No. Resi: ${nomorResi}
-            Tanggal: ${new Date().toLocaleDateString("id-ID")}
+    let text = `📋 FORMULIR PENDAFTARAN
 
-            Nama: ${nama}
-            WhatsApp: ${wa}
-            Umur: ${umur || "-"}
-            Kategori: ${kategori}
+ No. Resi: ${nomorResi}
+ Tanggal: ${new Date().toLocaleDateString("id-ID")}
 
-            Alamat:
-            ${alamat || "-"}
+ Nama: ${nama}
+ WhatsApp: ${wa}
+ Bank: ${bank || "-"}
+ Nomor Rekening: ${rekening || "-"}
 
-            Keterangan:
-            ${pesan || "-"}
+ Umur: ${umur || "-"}
+ Kategori: ${kategori}
 
-            Status: Menunggu Verifikasi`;
+ Alamat:
+${alamat || "-"}
 
-            window.open(
-                `https://wa.me/6283189306589?text=${encodeURIComponent(text)}`,
-                "_blank"
-            );
-        }
-    </script>
+ Keterangan:
+${pesan || "-"}
+
+ Status: Menunggu Verifikasi`;
+
+    window.open(
+        `https://wa.me/6283189306589?text=${encodeURIComponent(text)}`,
+        "_blank"
+    );
+}
+</script>
 
 </body>
 </html>
